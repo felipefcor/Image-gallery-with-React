@@ -6,37 +6,37 @@ import    './Gallery.css';
 
 
  let imgUrls = [
-    'https://source.unsplash.com/k3IogSsONd4/500x300',
-    'https://source.unsplash.com/gThfDnqgfMw/500x300',
-    'https://source.unsplash.com/_1x_x8Vtg2w/500x300',
-    'https://source.unsplash.com/TFP_s4_jRuE/500x300',
-    'https://source.unsplash.com/pElM4yerF5Q/500x300',
-    'https://source.unsplash.com/sFsy8CKyQ5c/500x300',
-    'https://source.unsplash.com/0WGucY1VHI0/500x300',
-    'https://source.unsplash.com/1ciHU-qPifY/500x300',
-    'https://source.unsplash.com/JZCJotPa96c/500x300',
-    'https://source.unsplash.com/8X19catOuNI/500x300',
-    'https://source.unsplash.com/_GDff35-Pa8/500x300',
-    'https://source.unsplash.com/XYok1nBGvhk/500x300'
+    'https://source.unsplash.com/k3IogSsONd4/800x600',
+    'https://source.unsplash.com/gThfDnqgfMw/800x600',
+    'https://source.unsplash.com/_1x_x8Vtg2w/800x600',
+    'https://source.unsplash.com/TFP_s4_jRuE/800x600',
+    'https://source.unsplash.com/pElM4yerF5Q/800x600',
+    'https://source.unsplash.com/sFsy8CKyQ5c/800x600',
+    'https://source.unsplash.com/0WGucY1VHI0/800x600',
+    'https://source.unsplash.com/1ciHU-qPifY/800x600',
+    'https://source.unsplash.com/JZCJotPa96c/800x600',
+    'https://source.unsplash.com/8X19catOuNI/800x600',
+    'https://source.unsplash.com/_GDff35-Pa8/800x600',
+    'https://source.unsplash.com/XYok1nBGvhk/800x600'
  ]
 
 
 
 export default class Gallery extends Component{
-    constructor(props) {
-      super(props);
+    //constructor(props) {
+     // super(props);
       
-      this.state = {
+      state = {
         isOpen: false,
         url: ''
       }
       
-  }
+  //}
     
     render() {
       return(
 
-        <div refs='gallery-container' className='container-fluid gallery-container'>
+        <div  className='container-fluid gallery-container'>
           
           <div className='row'>
             {
@@ -49,7 +49,7 @@ export default class Gallery extends Component{
                       <GalleryImage  className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
                       
                       <span className='card-icon-open fa fa-expand-arrows-alt' value={url} onClick={() => this.openModal(url)}></span>
-                      
+
                     </div>
                   </div>
                  )
